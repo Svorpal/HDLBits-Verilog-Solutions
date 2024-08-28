@@ -13,7 +13,7 @@ module top_module(
     localparam LEFT = 0, RIGHT = 1, FALL_LEFT = 2, FALL_RIGHT = 3, DIG_LEFT = 4, DIG_RIGHT = 5;
     reg [2:0] state, next;
     
-    always @(posedge clk, posedge areset) begin
+    always @(posedge clk or posedge areset) begin
         if(areset) begin
             state <= LEFT;
         end
