@@ -36,7 +36,7 @@ module top_module(
     always @(*) begin
         walk_left = (state == LEFT);
         walk_right = (state == RIGHT);
-        aaah = (state == FALL_LEFT) | (state == FALL_RIGHT);
-        digging = (state == DIG_LEFT) | (state == DIG_RIGHT);
+        aaah = (state == FALL_LEFT) || (state == FALL_RIGHT);
+        digging = (state == DIG_LEFT) || (state == DIG_RIGHT);
     end
 endmodule
