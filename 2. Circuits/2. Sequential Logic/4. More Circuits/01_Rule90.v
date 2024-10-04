@@ -10,7 +10,7 @@ module top_module(
             q_r <= data;
         end
         else begin
-            //q_r <= {1'b0, q_r[510:0]} ^ {q_r[511:1], 1'b0};
+            // q <= {1'b0,q[511:1]} ^ {q[510:0], 1'b0} ;
             q_r <= (q_r >> 1) ^ (q_r << 1);
         end
     end
